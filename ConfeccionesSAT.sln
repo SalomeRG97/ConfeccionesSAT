@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfeccionesSAT", "ConfeccionesSAT\ConfeccionesSAT.csproj", "{FCFDFDE1-0C30-4C6B-AF1E-2CDB59B2201D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{54E0F38F-9D52-4583-8471-482C46063B40}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{974B69E3-B271-476F-B37D-A2BD47688B4B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utility", "Utility", "{90857736-63D4-4F86-87E6-7D5F4DEFC6C1}"
@@ -19,19 +17,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{92D7F4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DTO", "DTO", "{786534DE-D132-43A7-86E4-28287091A854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{29C96B4F-4B47-4142-8624-091F83A6B3D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\Interfaces.csproj", "{29C96B4F-4B47-4142-8624-091F83A6B3D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{98005264-66E8-43D8-A689-FF3136E55B40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{98005264-66E8-43D8-A689-FF3136E55B40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{F9CB8958-EC3C-4137-A2D3-74604F2B2D2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{F9CB8958-EC3C-4137-A2D3-74604F2B2D2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{20611C57-D543-4926-9EB5-F779EB30879F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{20611C57-D543-4926-9EB5-F779EB30879F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{3568EFB8-C4D7-4AEC-B5C5-352C7537718E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configurations", "Shared\Configurations.csproj", "{3568EFB8-C4D7-4AEC-B5C5-352C7537718E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{ADCCDFF9-42AC-49E1-BF47-60EB8F42A75F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "Utilities\Utilities.csproj", "{ADCCDFF9-42AC-49E1-BF47-60EB8F42A75F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{DF92A40A-8417-49FD-AA7C-BA9E65A15B4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTO", "DTO\DTO.csproj", "{DF92A40A-8417-49FD-AA7C-BA9E65A15B4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

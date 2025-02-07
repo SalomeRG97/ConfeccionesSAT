@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "ConfeccionesSAT.Controllers.InputController",
+    "Method": "Create",
+    "RelativePath": "api/Input/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DTO.InputDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConfeccionesSAT.Controllers.InputController",
+    "Method": "Delete",
+    "RelativePath": "api/Input/Delete/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConfeccionesSAT.Controllers.InputController",
+    "Method": "Get",
+    "RelativePath": "api/Input/Get/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConfeccionesSAT.Controllers.InputController",
+    "Method": "GetAll",
+    "RelativePath": "api/Input/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConfeccionesSAT.Controllers.InputController",
+    "Method": "Update",
+    "RelativePath": "api/Input/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "DTO.InputDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
