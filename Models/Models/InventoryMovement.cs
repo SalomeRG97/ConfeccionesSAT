@@ -1,4 +1,7 @@
-﻿namespace Models.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Models.Models;
 
 public partial class InventoryMovement
 {
@@ -6,7 +9,7 @@ public partial class InventoryMovement
 
     public string Type { get; set; } = null!;
 
-    public int IdProduct { get; set; }
+    public int IdInput { get; set; }
 
     public int Lot { get; set; }
 
@@ -16,5 +19,5 @@ public partial class InventoryMovement
 
     public string Description { get; set; } = null!;
 
-    public virtual Product IdProductNavigation { get; set; } = null!;
+    public virtual Input IdInputNavigation { get; set; } = null!;
 }

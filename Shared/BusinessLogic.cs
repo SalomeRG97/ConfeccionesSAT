@@ -17,11 +17,13 @@ namespace Configurations
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IInputRepository, InputRepository>();
             builder.Services.AddScoped<IMachineRepository, MachineRepository>();
+            builder.Services.AddScoped<IInventoryMovementsRepository, InventoryMovementsRepository>();
         }
         public static void Services(WebApplicationBuilder builder)
         {
             builder.Services.AddScoped<IInputService, InputService>();
             builder.Services.AddScoped<IMachineService, MachineService>();
+            builder.Services.AddScoped<IInventoryMovementsService, InventoryMovementsService>();
         }
     }
 }

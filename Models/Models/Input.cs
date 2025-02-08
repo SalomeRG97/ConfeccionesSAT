@@ -1,4 +1,7 @@
-﻿namespace Models.Models;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Models.Models;
 
 public partial class Input
 {
@@ -13,4 +16,6 @@ public partial class Input
     public DateTime PurchaseDate { get; set; }
 
     public string ImageUrl { get; set; } = null!;
+
+    public virtual ICollection<InventoryMovement> InventoryMovements { get; set; } = new List<InventoryMovement>();
 }

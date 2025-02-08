@@ -11,6 +11,7 @@ namespace Repository.Base
         private readonly ConfeccionesSATDbContext _context;
         private IInputRepository _inputRepository;
         private IMachineRepository _machineRepository;
+        private IInventoryMovementsRepository _inventoryMovementsRepository;
 
         public UnitOfWork(ConfeccionesSATDbContext context)
         {
@@ -19,6 +20,7 @@ namespace Repository.Base
 
         public IInputRepository InputRepository => _inputRepository ??= new InputRepository(_context);
         public IMachineRepository MachineRepository => _machineRepository ??= new MachineRepository(_context);
+        public IInventoryMovementsRepository InventoryMovementsRepository => _inventoryMovementsRepository ??= new InventoryMovementsRepository(_context);
 
         public async Task Commit()
         {
