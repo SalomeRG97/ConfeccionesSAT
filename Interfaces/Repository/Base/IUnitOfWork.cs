@@ -6,6 +6,8 @@ namespace Interfaces.Repository.Base
     public interface IUnitOfWork
     {
         IInputRepository InputRepository { get; }
+        IMachineRepository MachineRepository { get; }
+
         IDbContextTransaction BeginTransaction();
         Task Commit();
         void Dispose();

@@ -19,6 +19,8 @@ public partial class ConfeccionesSATDbContext : DbContext
 
     public virtual DbSet<Input> Inputs { get; set; }
 
+    public virtual DbSet<InventoryMovement> InventoryMovements { get; set; }
+
     public virtual DbSet<Machine> Machines { get; set; }
 
     public virtual DbSet<MaintenancePlan> MaintenancePlans { get; set; }
@@ -161,6 +163,46 @@ public partial class ConfeccionesSATDbContext : DbContext
             entity.Property(e => e.Type)
                 .HasMaxLength(255)
                 .HasColumnName("type");
+        });
+
+        modelBuilder.Entity<InventoryMovement>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("inventory_movements");
+
+            entity.HasIndex(e => e.IdProduct, "inventory_product_id_product_foreign");
+
+            entity.Property(e => e.Id)
+                .HasColumnType("int(11)")
+                .HasColumnName("id");
+            entity.Property(e => e.Date).HasColumnName("date");
+            entity.Property(e => e.Description)
+                .HasMaxLength(255)
+                .HasColumnName("description");
+            entity.Property(e => e.DestinationWarehouse)
+                .HasMaxLength(255)
+                .HasColumnName("destination_warehouse");
+            entity.Property(e => e.IdProduct)
+                .HasColumnType("int(11)")
+                .HasColumnName("id_product");
+            entity.Property(e => e.Lot)
+                .HasColumnType("int(11)")
+                .HasColumnName("lot");
+            entity.Property(e => e.OriginWarehouse)
+                .HasMaxLength(255)
+                .HasColumnName("origin_warehouse");
+            entity.Property(e => e.Type)
+                .HasColumnType("enum('Entrada','Salida','Transferencia')")
+                .HasColumnName("type");
+            entity.Property(e => e.User)
+                .HasMaxLength(255)
+                .HasColumnName("user");
+
+            entity.HasOne(d => d.IdProductNavigation).WithMany(p => p.InventoryMovements)
+                .HasForeignKey(d => d.IdProduct)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("inventory_product_id_product_foreign");
         });
 
         modelBuilder.Entity<Machine>(entity =>

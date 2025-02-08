@@ -7,7 +7,7 @@ namespace Repository.Base
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly ConfeccionesSATDbContext _context;
+        protected readonly ConfeccionesSATDbContext _context;
         private readonly DbSet<T> _dbSet;
 
         public Repository(ConfeccionesSATDbContext context)
