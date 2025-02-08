@@ -7,6 +7,7 @@ namespace Interfaces.Repository.Base
     {
         IInputRepository InputRepository { get; }
         IMachineRepository MachineRepository { get; }
+        IInventoryMovementsRepository InventoryMovementsRepository { get; }
 
         IDbContextTransaction BeginTransaction();
         Task Commit();

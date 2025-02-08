@@ -21,7 +21,7 @@ namespace Repository.Repositories
                 new MySqlParameter("movement_type", movement_type)
             };
 
-            await _context.Database.ExecuteSqlRawAsync("CALL ActualizarInventario(?, ?, ?)", parameters);
+            await _context.Database.ExecuteSqlRawAsync("CALL update_inventory(?, ?, ?)", parameters);
         }
     }
 }

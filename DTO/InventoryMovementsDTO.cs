@@ -6,7 +6,7 @@
 
         public string Type { get; set; } = null!;
 
-        public int IdProduct { get; set; }
+        public int IdInput { get; set; }
 
         public int Lot { get; set; }
 

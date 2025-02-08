@@ -171,7 +171,7 @@ public partial class ConfeccionesSATDbContext : DbContext
 
             entity.ToTable("inventory_movements");
 
-            entity.HasIndex(e => e.IdProduct, "inventory_product_id_product_foreign");
+            entity.HasIndex(e => e.IdInput, "inventory_product_id_product_foreign");
 
             entity.Property(e => e.Id)
                 .HasColumnType("int(11)")
@@ -180,29 +180,23 @@ public partial class ConfeccionesSATDbContext : DbContext
             entity.Property(e => e.Description)
                 .HasMaxLength(255)
                 .HasColumnName("description");
-            entity.Property(e => e.DestinationWarehouse)
-                .HasMaxLength(255)
-                .HasColumnName("destination_warehouse");
-            entity.Property(e => e.IdProduct)
+            entity.Property(e => e.IdInput)
                 .HasColumnType("int(11)")
-                .HasColumnName("id_product");
+                .HasColumnName("id_input");
             entity.Property(e => e.Lot)
                 .HasColumnType("int(11)")
                 .HasColumnName("lot");
-            entity.Property(e => e.OriginWarehouse)
-                .HasMaxLength(255)
-                .HasColumnName("origin_warehouse");
             entity.Property(e => e.Type)
-                .HasColumnType("enum('Entrada','Salida','Transferencia')")
+                .HasColumnType("enum('Entrada','Salida')")
                 .HasColumnName("type");
             entity.Property(e => e.User)
                 .HasMaxLength(255)
                 .HasColumnName("user");
 
-            entity.HasOne(d => d.IdProductNavigation).WithMany(p => p.InventoryMovements)
-                .HasForeignKey(d => d.IdProduct)
+            entity.HasOne(d => d.IdInputNavigation).WithMany(p => p.InventoryMovements)
+                .HasForeignKey(d => d.IdInput)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("inventory_product_id_product_foreign");
+                .HasConstraintName("inventory_movements_id_input_foreign");
         });
 
         modelBuilder.Entity<Machine>(entity =>

@@ -25,7 +25,5 @@ public partial class Product
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<InventoryMovement> InventoryMovements { get; set; } = new List<InventoryMovement>();
-
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }
