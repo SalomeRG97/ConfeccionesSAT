@@ -9,6 +9,8 @@ namespace Configurations
         public MappingProfile() 
         {
             CreateMap<Input, InputDTO>().ReverseMap();
+            CreateMap<Machine, MachineDTO>().ReverseMap();
+            CreateMap<InventoryMovement, InventoryMovementsDTO>().ReverseMap();
         }
     }
 }

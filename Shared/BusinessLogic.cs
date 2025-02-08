@@ -16,10 +16,12 @@ namespace Configurations
         {
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IInputRepository, InputRepository>();
+            builder.Services.AddScoped<IMachineRepository, MachineRepository>();
         }
         public static void Services(WebApplicationBuilder builder)
         {
             builder.Services.AddScoped<IInputService, InputService>();
+            builder.Services.AddScoped<IMachineService, MachineService>();
         }
     }
 }

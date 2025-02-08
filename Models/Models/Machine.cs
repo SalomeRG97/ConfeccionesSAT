@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Models.Models;
+﻿namespace Models.Models;
 
 public partial class Machine
 {
@@ -11,7 +8,7 @@ public partial class Machine
 
     public string Type { get; set; } = null!;
 
-    public DateOnly PurchaseDate { get; set; }
+    public DateTime PurchaseDate { get; set; }
 
     public string ImageUrl { get; set; } = null!;
 

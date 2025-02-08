@@ -2,6 +2,7 @@
 using DTO;
 using Interfaces.Repository.Base;
 using Interfaces.Service;
+using Microsoft.EntityFrameworkCore;
 using Models.Models;
 
 namespace Services
@@ -59,5 +60,7 @@ namespace Services
             _unitOfWork.InputRepository.DeleteAsync(entity);
             await _unitOfWork.Commit();
         }
+
+
     }
 }

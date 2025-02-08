@@ -1,0 +1,34 @@
+# Archivos de compilación y binarios
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Archivos de configuración de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Dependencias de paquetes
+packages/
+!packages/repositories.config
+
+# Archivos generados por Visual Studio
+.vscode/
+*.vs/
+
+# Archivos de logs y temporales
+*.log
+*.cache
+*.tmp
+
+# Configuración de entorno
+.env
+appsettings*.json
+!appsettings.json # Mantiene el archivo base, pero ignora versiones específicas
+
+# Archivos de publicación
+publish/
+wwwroot/
